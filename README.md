@@ -8,6 +8,7 @@ This is a custom authenticator for the fantastic [Ember Simple Auth](https://git
 If you're using Ember CLI, installation is simple. Just issue the following two commands within your Ember project directory.
 
 ```
+ember install emberfire
 ember install ember-cli-simple-auth
 ember install ember-cli-simple-auth-firebase
 ```

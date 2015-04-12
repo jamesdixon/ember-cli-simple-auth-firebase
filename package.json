@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-simple-auth-firebase",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Firebase Authenticator for Ember Simple Auth",
   "directories": {
     "doc": "doc",

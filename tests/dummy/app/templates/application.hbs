@@ -1,0 +1,26 @@
+{{outlet}}
+
+{{#if session.isAuthenticated}}
+	<h1>Authenticated!</h1>
+	<a {{ action 'logout' }}>Logout</a>
+{{else}}
+
+	<form name="form" class="form-validation" {{action "login" on="submit" }}>
+	    <div class="text-danger wrapper text-center">
+	    </div>
+	    <div class="list-group list-group-sm">
+	        <div class="list-group-item">
+	            {{input value=email type="email" placeholder="email" class="form-control no-border"}}
+	        </div>
+	        <div class="list-group-item">
+	            {{input value=password type="password" placeholder="password" class="form-control no-border"}}
+	        </div>
+	    </div>
+	    <button type="submit" class="btn btn-lg btn-primary btn-block">Log in</button>
+	    <div class="text-center m-t m-b"><a href="#">Forgot password?</a></div>
+	    <div class="line line-dashed"></div>
+	    <p class="text-center"><small>Do not have an account?</small></p>
+	    <a href="#" class="btn btn-lg btn-default btn-block">Create an account</a>
+	</form>
+    
+{{/if}}

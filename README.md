@@ -1,6 +1,8 @@
 #Firebase Authenticator for Ember Simple Auth
 This is a custom authenticator for the fantastic [Ember Simple Auth](https://github.com/simplabs/ember-simple-auth) project.
 
+**This addon currently only supports Firebase Email & Password authentication.**
+
 ## Installation
 
 If you're using Ember CLI, installation is simple. Just issue the following two commands within your Ember project directory.

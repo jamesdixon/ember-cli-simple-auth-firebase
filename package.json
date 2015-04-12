@@ -39,7 +39,8 @@
     "ember-simple-auth"
   ],
   "dependencies": {
-    "ember-cli-simple-auth": "~0.7.3"
+    "ember-cli-simple-auth": "~0.7.3",
+    "emberfire": "^1.4.4"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

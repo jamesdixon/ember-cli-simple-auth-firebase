@@ -40,25 +40,40 @@ export default Base.extend({
 
     },
     authenticate: function(options) {
-
-        var _this = this;
-
+      var _this = this;
+      if(options.provider === "password" || !options.provider){
         return new Promise(function(resolve, reject) {
-
-            _this.get('firebase').authWithPassword({
-                'email': options.email,
-                'password': options.password
-            }, function(error, authData) {
-                Ember.run(function() {
-                    if (error) {
-                        reject(error);
-                    } else {
-                        resolve(authData);
-                    }
-                });
-
+          _this.get('firebase').authWithPassword({
+              'email': options.email,
+              'password': options.password
+          }, function(error, authData) {
+            Ember.run(function() {
+              if (error) {
+                reject(error);
+              } else {
+                resolve(authData);
+              }
             });
+          });
         });
+      } else {
+        return new Promise(function(resolve, reject) {
+          var callback = function(error, authData) {
+            Ember.run(function() {
+              if (error) {
+                reject(error);
+              } else {
+                resolve(authData);
+              }
+            });
+          };
+          if(options.redirect){
+            _this.get('firebase').authWithOAuthPopup(options.provider, callback);
+          } else {
+            _this.get('firebase').authWithOAuthRedirect(options.provider, callback)
+          }
+        });
+      }
     },
     invalidate: function(data) {
 

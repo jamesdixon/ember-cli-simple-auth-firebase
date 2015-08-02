@@ -68,9 +68,9 @@ export default Base.extend({
             });
           };
           if(options.redirect){
-            _this.get('firebase').authWithOAuthPopup(options.provider, callback);
+            _this.get('firebase').authWithOAuthRedirect(options.provider, callback);
           } else {
-            _this.get('firebase').authWithOAuthRedirect(options.provider, callback)
+            _this.get('firebase').authWithOAuthPopup(options.provider, callback)
           }
         });
       }

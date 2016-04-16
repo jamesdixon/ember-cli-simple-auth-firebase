@@ -2,6 +2,8 @@ import Base from 'ember-simple-auth/authenticators/base';
 import Firebase from 'firebase';
 import config from '../config/environment';
 
+const { Promise } = Ember.RSVP;
+
 export default Base.extend({
 
     init: function() {

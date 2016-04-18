@@ -7,7 +7,7 @@ If you're using Ember CLI, installation is simple. Just issue the following two 
 
 ```
 ember install emberfire
-ember install ember-cli-simple-auth
+ember install ember-simple-auth
 ember install ember-cli-simple-auth-firebase
 ```
 Alternatively, you can clone the project and copy the contents of the `initializers` and `authenticators` folder into your project.
